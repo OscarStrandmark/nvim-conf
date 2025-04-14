@@ -11,6 +11,8 @@ require("nvim-tree").setup({
 })
 
 vim.opt.termguicolors = true
+vim.o.background = "dark"
+vim.cmd([[colorscheme gruvbox]])
 
 -- Keymaps
 
