@@ -10,6 +10,8 @@ require("nvim-tree").setup({
 		filters = { custom = { "^.git$" } }
 })
 
+vim.opt.termguicolors = true
+
 -- Keymaps
 
 vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>', { desc = "Toggle file-tree" })
