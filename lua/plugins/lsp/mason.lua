@@ -22,7 +22,6 @@ return {
 			ensure_installed = {
 				"html",
 				"cssls",
-				"svelte",
 				"lua_ls",
 				"emmet_ls",
 			},
