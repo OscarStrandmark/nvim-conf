@@ -19,3 +19,5 @@ vim.opt.termguicolors = true
 vim.o.background = "dark"
 
 require('keymaps')
+
+vim.cmd("NvimTreeFocus")
