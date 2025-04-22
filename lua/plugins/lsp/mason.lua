@@ -25,7 +25,6 @@ return {
 				"lua_ls",
 				"emmet_ls",
 			},
-
 			automatic_installation = true
 		})
 	end

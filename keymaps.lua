@@ -1,7 +1,7 @@
 
 --Tree
 vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>', { desc = "Toggle file-tree" })
-
+vim.keymap.set('n', '<leader>tcf', ':NvimTreeFindFile<CR>', { desc = "Toggle file-tree" })
 
 --Telescope
 local builtin = require('telescope.builtin')
