@@ -9,9 +9,9 @@ vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 
 require("notify").setup({
-            background_colour = "#000000",
-            merge_duplicates = true
-        })
+    background_colour = "#000000",
+    merge_duplicates = true
+})
 
 vim.cmd("set number")
 
