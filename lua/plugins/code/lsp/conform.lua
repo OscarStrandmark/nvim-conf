@@ -3,7 +3,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     keys = {
         {
-            "<leader>ff",
+            "<leader>mp",
             function() require("conform").format({ lsp_fallback = true, async = false, timeout_ms = 500 }) end,
             desc = "Format files using conform"
         }
@@ -27,7 +27,6 @@ return {
                 liquid = { "prettier" },
                 lua = { "stylua" },
                 python = { "isort", "black" },
-                java = { "jdtls" },
             },
             format_on_save = {
                 lsp_fallback = true,
