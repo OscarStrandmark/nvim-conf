@@ -1,6 +1,13 @@
 return {
     "stevearc/conform.nvim",
     event = { "BufReadPre", "BufNewFile" },
+    keys = {
+        {
+            "<leader>ff",
+            function() require("conform").format({ lsp_fallback = true, async = false, timeout_ms = 500 }) end,
+            desc = "Format files using conform"
+        }
+    },
     config = function()
         local conform = require("conform")
 

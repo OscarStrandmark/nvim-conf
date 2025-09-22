@@ -17,5 +17,3 @@ vim.cmd("set number")
 
 vim.opt.termguicolors = true
 vim.o.background = "dark"
-
-require('keymaps')

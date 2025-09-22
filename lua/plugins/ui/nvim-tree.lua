@@ -5,6 +5,10 @@ return {
     dependencies = {
         "nvim-tree/nvim-web-devicons",
     },
+    keys = {
+        { '<leader>tt',  '<cmd>:NvimTreeToggle<CR>',   desc = "Toggle file-tree" },
+        { '<leader>tcf', '<cmd>:NvimTreeFindFile<CR>', desc = "Navigate to file in tree" }
+    },
     config = function()
         require("nvim-tree").setup({
             sort = {
