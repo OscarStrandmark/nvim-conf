@@ -10,6 +10,7 @@ return {
     },
     opts = {
         defaults = {
+            layout_strategy='vertical',
             layout_config = {
                 vertical = {
                     width = 0.99

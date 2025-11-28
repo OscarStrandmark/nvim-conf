@@ -14,6 +14,3 @@ require("notify").setup({
 })
 
 vim.cmd("set number")
-
-vim.opt.termguicolors = true
-vim.o.background = "dark"
