@@ -6,7 +6,8 @@ return {
         { '<leader>ff', '<cmd>:Telescope find_files<CR>', desc = "Telescope: Find Files" },
         { '<leader>fg', '<cmd>:Telescope live_grep<CR>',  desc = "Telescope: Live Grep" },
         { '<leader>fb', '<cmd>:Telescope buffers<CR>',    desc = "Telescope: Buffers" },
-        { '<leader>fh', '<cmd>:Telescope help_tags<CR>',  desc = "Telescope: Help tags" }
+        { '<leader>fh', '<cmd>:Telescope help_tags<CR>',  desc = "Telescope: Help tags" },
+        { '<leader>fc', '<cmd>:Telescope git_status<CR>',  desc = "Telescope: Changed files" }
     },
     opts = {
         defaults = {
