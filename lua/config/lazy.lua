@@ -27,6 +27,9 @@ require("lazy").setup({
         { import = "plugins.code" },
         { import = "plugins.ui" },
     },
+    install = {
+        colorscheme = {"onedark"}
+    },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
     -- automatically check for plugin updates
