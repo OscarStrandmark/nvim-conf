@@ -18,12 +18,12 @@ return {
         -- - etc
     },
     init = function()
+        -- Setting vim.g.coq_settings is enough to auto-start COQ in v2.
         vim.g.coq_settings = {
-            auto_start = true, -- if you want to start COQ at startup
             -- Your COQ settings here
         }
     end,
-    config = function()
-        -- Your LSP settings here
-    end,
+    -- No `config` needed in v2: lsp_ensure_capabilities is a no-op now, and
+    -- Neovim 0.12's vim.lsp.protocol.make_client_capabilities() covers what
+    -- v1 used to inject.
 }
