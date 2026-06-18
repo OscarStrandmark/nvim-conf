@@ -1,20 +1,23 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    event = "BufEnter",
-    build = function()
-        require("nvim-treesitter.install").update({
-            with_sync = true
-        })
-    end,
+    branch = "main",
+    build = ":TSUpdate",
     config = function()
-        require("nvim-treesitter.configs").setup({
-            ensure_installed = { "java", "lua", "vim", "vimdoc", "javascript", "html", "typescript", "css" , "xml", "vue" },
-            auto_install = true,
-            ignore_install = { "" },
-            sync_install = false,
-            highlight = { enable = true },
-            indent = { enable = true },
-            rainbow = { enable = true, extended_mode = true }
+        require("nvim-treesitter").setup()
+        local ensure = {
+            "java", "lua", "vim", "vimdoc", "javascript",
+            "html", "typescript", "css", "xml", "vue",
+        }
+        if vim.fn.executable("tree-sitter") == 1 then
+            require("nvim-treesitter").install(ensure)
+        end
+        vim.api.nvim_create_autocmd("FileType", {
+            callback = function(args)
+                if pcall(vim.treesitter.start) then
+                    vim.bo[args.buf].indentexpr =
+                        "v:lua.require'nvim-treesitter'.indentexpr()"
+                end
+            end,
         })
     end,
 }
